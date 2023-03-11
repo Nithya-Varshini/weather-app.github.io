@@ -4,6 +4,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #d5d4d4;
+  background-image: url(imm.jpg);
 }
 
 code {
