@@ -3,6 +3,7 @@ import { useState } from "react";
 import Search from './components/search/search';
 import CurrentWeather from './components/current-weather/current-weather'
 import {WEATHER_API_URL, WEATHER_API_KEY} from './api';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 const [currentWeather, setCurrentWeather] =useState(null);
@@ -30,10 +31,18 @@ const [forecast, setForecast] =useState(null);
   console.log(forecast);
 
   return (
-    <div className="container">
-      <Search onSearchChange={handleOnSearchChange}/>
-      {currentWeather && <CurrentWeather data={currentWeather}/>} 
-    </div>
+    <><div className="container">
+        <div className='row'>
+          <div className='col-sm-12'>
+            <Search onSearchChange={handleOnSearchChange} />
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-12'>
+            {currentWeather && <CurrentWeather data={currentWeather} />}
+          </div>
+        </div>
+      </div></>
   );
 }
 
