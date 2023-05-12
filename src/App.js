@@ -39,7 +39,7 @@ const [forecast, setForecast] =useState(null);
           </div>
         </div>
         <div className='row'>
-          <div className='col-12'>
+          <div className='vol-12 col-6'>
             {currentWeather && <CurrentWeather data={currentWeather} />}
           </div>
         </div>
